@@ -61,7 +61,7 @@ async function workout(totalTime) {
   try {
     let timeLeft = await stretch(totalTime);
     timeLeft = await runOnTreadmill(timeLeft);
-    timeLeft = await liftWeights(result);
+    timeLeft = await liftWeights(timeLeft);
     console.log(`done working out with ${timeLeft / 1000} seconds left`);
   } catch (err) {
     console.log(err);
